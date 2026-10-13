@@ -18,7 +18,7 @@ targets:
       path: Kinfolk/Info.plist
       properties:
         CFBundleDisplayName: Kinfolk
-        UIAppFonts: [Fraunces.ttf, Fraunces-Italic.ttf]
+        UIAppFonts: [LibreCaslonDisplay-Regular.ttf, LibreCaslonText.ttf, LibreCaslonText-Italic.ttf, InstrumentSans.ttf]
         NSPhotoLibraryUsageDescription: Kinfolk uses this to add a photo of Papa.
         UILaunchScreen:
           UIColorName: LaunchBackground
@@ -39,7 +39,7 @@ targets:
       path: KinfolkWidget/Info.plist
       properties:
         CFBundleDisplayName: Kinfolk
-        UIAppFonts: [Fraunces.ttf, Fraunces-Italic.ttf]
+        UIAppFonts: [LibreCaslonDisplay-Regular.ttf, LibreCaslonText.ttf, LibreCaslonText-Italic.ttf, InstrumentSans.ttf]
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
     settings:

@@ -15,7 +15,6 @@ struct AskView: View {
                              subtitle: "Everyone in the family sees the answer.") {
                     ChipRow(options: ChipOption.grandparents, selection: $store.askTarget)
                 }
-                .padding(.horizontal, 8)
 
                 TextField("", text: $store.draftQuestion,
                           prompt: Text("What do you want to ask \(target.name)?")
@@ -32,7 +31,7 @@ struct AskView: View {
                     withAnimation(.snappy) { store.sendDraft() }
                     focused = false
                 } label: {
-                    Text("Send to \(target.name)")
+                    ArrowLabel(title: "Send to \(target.name)")
                         .frame(maxWidth: .infinity)
                 }
                 .kinfolkButton(canSend ? .primary : .secondary)
@@ -63,10 +62,8 @@ struct AskView: View {
                 }
             }
             .padding(.horizontal, 16)
-            .padding(.top, 20)
             .padding(.bottom, 24)
         }
-        .waveBackdrop()
         .scrollDismissesKeyboard(.interactively)
     }
 }

@@ -1,48 +1,61 @@
 import SwiftUI
 
-/// The same top on every tab: a big title, one plain line saying what the screen is for,
-/// and an optional button or photo underneath.
+/// The top of every screen, centered: an optional small label, a big serif headline,
+/// one gray line saying what's here, and an optional button or chips underneath.
 struct ScreenHeader<Accessory: View>: View {
+    var eyebrow: Text? = nil
     let title: String
     let subtitle: String
     @ViewBuilder var accessory: Accessory
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 6) {
+        VStack(spacing: 12) {
+            if let eyebrow {
+                eyebrow
+                    .font(Theme.ui(.caption, weight: .semibold))
+                    .tracking(1.2)
+                    .textCase(.uppercase)
+                    .foregroundStyle(Theme.inkSoft)
+            }
             Text(title)
-                .font(Theme.ui(.largeTitle, weight: .bold))
-                .tracking(-0.4)
+                .font(Theme.display())
+                .tracking(-0.6)
                 .foregroundStyle(Theme.ink)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
             Text(subtitle)
                 .font(Theme.ui(.body))
-                .foregroundStyle(Theme.ink.opacity(0.78))
+                .tracking(-0.3)
+                .foregroundStyle(Theme.inkSoft)
+                .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
             accessory
-                .padding(.top, 14)
+                .padding(.top, 10)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.top, 12)
-        .padding(.bottom, 28)
-        .reportsHeaderBottom()
+        .frame(maxWidth: .infinity)
+        .padding(.horizontal, 12)
+        .padding(.top, 28)
+        .padding(.bottom, 36)
     }
 }
 
 extension ScreenHeader where Accessory == EmptyView {
-    init(title: String, subtitle: String) {
-        self.init(title: title, subtitle: subtitle) { EmptyView() }
+    init(eyebrow: Text? = nil, title: String, subtitle: String) {
+        self.init(eyebrow: eyebrow, title: title, subtitle: subtitle) { EmptyView() }
     }
 }
 
-/// Heading at the top of a sheet, like "October" or "Grandkids".
-/// Lives inside the sheet so it never sits on the color wave's edge.
+/// Heading at the top of a card, like "OCTOBER" or "GRANDKIDS".
 struct SectionLabel: View {
     let text: String
 
     var body: some View {
         Text(text)
-            .font(Theme.ui(.footnote, weight: .semibold))
+            .font(Theme.ui(.caption, weight: .semibold))
+            .tracking(1.2)
+            .textCase(.uppercase)
             .foregroundStyle(Theme.inkSoft)
             .padding(.top, 18)
-            .padding(.bottom, 4)
+            .padding(.bottom, 6)
     }
 }

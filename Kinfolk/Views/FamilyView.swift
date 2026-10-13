@@ -9,11 +9,10 @@ struct FamilyView: View {
                 ScreenHeader(title: "Family",
                              subtitle: "Everyone here sees the same story each day.") {
                     ShareLink(item: "Come read our grandparents' stories with us on Kinfolk.") {
-                        Text("Invite someone")
+                        ArrowLabel(title: "Invite someone")
                     }
-                    .kinfolkButton(.primary, compact: true)
+                    .kinfolkButton(.primary)
                 }
-                .padding(.horizontal, 8)
 
                 section("Grandparents", rows: Family.grandparents.map {
                     ($0.name, countText(store.storyCount(for: $0), noun: "story", plural: "stories", none: "No stories yet"))
@@ -25,10 +24,8 @@ struct FamilyView: View {
                 }
             }
             .padding(.horizontal, 16)
-            .padding(.top, 20)
             .padding(.bottom, 24)
         }
-        .waveBackdrop()
     }
 
     private func section(_ title: String, rows: [(name: String, detail: String)]) -> some View {

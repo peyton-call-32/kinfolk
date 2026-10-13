@@ -27,8 +27,10 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Fraunces.ttf</string>
-		<string>Fraunces-Italic.ttf</string>
+		<string>LibreCaslonDisplay-Regular.ttf</string>
+		<string>LibreCaslonText.ttf</string>
+		<string>LibreCaslonText-Italic.ttf</string>
+		<string>InstrumentSans.ttf</string>
 	</array>
 </dict>
 </plist>

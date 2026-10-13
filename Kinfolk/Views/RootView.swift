@@ -6,54 +6,84 @@ enum AppTab: String, CaseIterable {
 
 struct RootView: View {
     @State private var selection: AppTab = .today
-    @Namespace private var tabPill
+    @Namespace private var tabHighlight
 
     var body: some View {
-        Group {
-            switch selection {
-            case .today: TodayView()
-            case .stories: StoriesView()
-            case .ask: AskView()
-            case .family: FamilyView()
+        VStack(spacing: 0) {
+            topBar
+            Group {
+                switch selection {
+                case .today: TodayView()
+                case .stories: StoriesView()
+                case .ask: AskView()
+                case .family: FamilyView()
+                }
             }
+            .id(selection)
+            .transition(.asymmetric(insertion: .opacity.combined(with: .offset(y: 10)),
+                                    removal: .opacity))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .id(selection)
-        .transition(.asymmetric(insertion: .opacity.combined(with: .offset(y: 14)),
-                                removal: .opacity))
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Theme.paper.ignoresSafeArea())
         .safeAreaInset(edge: .bottom, spacing: 0) { tabBar }
         .onOpenURL { _ in selection = .today } // opened from the widget
     }
 
-    /// Floating glass pill of text tabs. The selected tab sits in a dark glass pill that slides over.
+    /// Floating bar across the top: the Kinfolk name, and a shortcut to ask a question.
+    private var topBar: some View {
+        HStack {
+            KinfolkWordmark(size: 20)
+            Spacer()
+            if selection != .ask {
+                Button { switchTo(.ask) } label: { Text("Ask a question") }
+                    .kinfolkButton(.secondary, compact: true)
+            }
+        }
+        .padding(.leading, 16)
+        .padding(.trailing, 8)
+        .frame(height: 54)
+        .background(Theme.sheet, in: RoundedRectangle(cornerRadius: 14))
+        .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Theme.line, lineWidth: 1))
+        .softShadow()
+        .padding(.horizontal, 16)
+        .padding(.top, 4)
+        .padding(.bottom, 4)
+        .zIndex(1)
+    }
+
+    /// Floating bar of text tabs. The chosen tab sits on a dark tile that slides over.
     private var tabBar: some View {
         HStack(spacing: 0) {
             ForEach(AppTab.allCases, id: \.self) { tab in
                 let isSelected = selection == tab
-                Button {
-                    withAnimation(.snappy(duration: 0.35)) { selection = tab }
-                } label: {
+                Button { switchTo(tab) } label: {
                     Text(tab.rawValue)
-                        .font(Theme.ui(.body, weight: isSelected ? .semibold : .regular))
+                        .font(Theme.ui(.subheadline, weight: isSelected ? .semibold : .medium))
+                        .tracking(-0.2)
                         .foregroundStyle(isSelected ? Theme.sheet : Theme.inkSoft)
-                        .frame(maxWidth: .infinity, minHeight: 48)
+                        .frame(maxWidth: .infinity, minHeight: 46)
                         .background {
                             if isSelected {
-                                GlassPill(kind: .selected)
-                                    .matchedGeometryEffect(id: "pill", in: tabPill)
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Theme.ink)
+                                    .matchedGeometryEffect(id: "tab", in: tabHighlight)
                             }
                         }
-                        .contentShape(Capsule())
+                        .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
                 .accessibilityAddTraits(isSelected ? .isSelected : [])
             }
         }
-        .padding(6)
-        .background(GlassPill(kind: .secondary))
-        .padding(.horizontal, 20)
+        .padding(5)
+        .background(Theme.sheet, in: RoundedRectangle(cornerRadius: 14))
+        .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Theme.line, lineWidth: 1))
+        .softShadow(1.5)
+        .padding(.horizontal, 16)
         .padding(.bottom, 6)
     }
-}
 
+    private func switchTo(_ tab: AppTab) {
+        withAnimation(.snappy(duration: 0.3)) { selection = tab }
+    }
+}

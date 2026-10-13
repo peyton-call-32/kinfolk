@@ -7,29 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08313FEF893BB904D540F826 /* InstrumentSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF152ECD1508326F3FB5169E /* InstrumentSans.ttf */; };
 		0BDFC9F7D4F1EC03C2326698 /* KinfolkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB0E1FAE4FE59792FCD1F46 /* KinfolkApp.swift */; };
+		169FD8687EE0B616CCFE1AB0 /* OFL-InstrumentSans.txt in Resources */ = {isa = PBXBuildFile; fileRef = E84BE6F4C5A42505375830C0 /* OFL-InstrumentSans.txt */; };
+		174D515254E82420DBDFABF8 /* InstrumentSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF152ECD1508326F3FB5169E /* InstrumentSans.ttf */; };
 		1750BB83488C17B4B8B2A251 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EC8CB43DB48600CFA7840 /* ButtonStyles.swift */; };
 		1A1570491564D2A837CD9DB9 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359BE999F7319553F54D04F /* Story.swift */; };
+		2007C6B7273E226FC107A3AF /* LibreCaslonText-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B481EFE49920588594753D5 /* LibreCaslonText-Italic.ttf */; };
 		269656911DA3C28A6F2EAEFA /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D4506C14CA064C5323EFA7 /* StoriesView.swift */; };
+		28CBA7B594D2BC84054C0C8A /* OFL-LibreCaslon.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7F5CB4C99A103CF19C10D2F /* OFL-LibreCaslon.txt */; };
 		299E4945EC3BAD79EB1C975C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E04DE6177F9086CA083A04 /* RootView.swift */; };
-		29F7377042E411330258CD45 /* OFL-Fraunces.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B34DB183B0546917495FE65 /* OFL-Fraunces.txt */; };
 		2DD030BF8551DCCB3A73C4E8 /* ScreenHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B17FF18B73469B1A4B239 /* ScreenHeader.swift */; };
-		4473DB227C2A17B6CE1A90FF /* WaveBackdrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1254140E4732DD84A38EA0 /* WaveBackdrop.swift */; };
+		3A93021C8172E8B551AC8037 /* LibreCaslonDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65791535B35A12EEEFF5E9A3 /* LibreCaslonDisplay-Regular.ttf */; };
 		44B36FD784C579A5F6A1FFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3AD74184B0AD33E01C0009 /* Assets.xcassets */; };
 		489F60FE3BE068A564A296C4 /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E3194462B13FEAD5555513 /* FamilyView.swift */; };
-		4D109A16A830A94A360DBEF1 /* OFL-Fraunces.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B34DB183B0546917495FE65 /* OFL-Fraunces.txt */; };
 		515FF0CD9B72A984A39ED041 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9057AC1277A8C4C73C347 /* TodayView.swift */; };
 		53439AA1B5F2276BC3875A58 /* KinfolkWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B9DEDA1EE93773A8E2DB8 /* KinfolkWidget.swift */; };
-		605215FB2A43EE263314B196 /* Fraunces-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41F24E540DBDAE8689258157 /* Fraunces-Italic.ttf */; };
+		66352F555C4FC71F4CF4BEAD /* LibreCaslonDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65791535B35A12EEEFF5E9A3 /* LibreCaslonDisplay-Regular.ttf */; };
 		684A51CAA89CEC3DDD1B8E35 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61142D31F20DEACD1585051 /* Brand.swift */; };
+		6CC695937C7039D2710A41C3 /* LibreCaslonText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 616C0226E3EA8AA4BAD63E9E /* LibreCaslonText.ttf */; };
 		8247D99EF56A10E83817A24A /* ChipRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA66B056530F607D879B7A /* ChipRow.swift */; };
-		84174279B1255991434EDBFA /* Fraunces.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97A853A36FC3A79D1A35644D /* Fraunces.ttf */; };
+		8FE7214988A77DE42D6FB5DD /* LibreCaslonText-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2B481EFE49920588594753D5 /* LibreCaslonText-Italic.ttf */; };
 		9291C659661CFFA1AC721A6C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0F36F98302F21B2B66C08 /* Theme.swift */; };
-		9FA2A5D9954F430295E9CF2C /* Fraunces-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41F24E540DBDAE8689258157 /* Fraunces-Italic.ttf */; };
 		B06727F06347DE040D4B2EA0 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61142D31F20DEACD1585051 /* Brand.swift */; };
-		CFB70A07312A33E1875142E5 /* Fraunces.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97A853A36FC3A79D1A35644D /* Fraunces.ttf */; };
 		D025785540A76DBF18ABCF0F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0F36F98302F21B2B66C08 /* Theme.swift */; };
+		D4488FFA32ADCCB5AED120FE /* LibreCaslonText.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 616C0226E3EA8AA4BAD63E9E /* LibreCaslonText.ttf */; };
 		D71A46AC323538DFAAC0F641 /* FamilyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB5B0F425F795D40211B7D /* FamilyStore.swift */; };
+		D71DB7FE6D82EFD392034653 /* OFL-LibreCaslon.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7F5CB4C99A103CF19C10D2F /* OFL-LibreCaslon.txt */; };
+		DDC5F72F43DCFF8F49EC62E7 /* OFL-InstrumentSans.txt in Resources */ = {isa = PBXBuildFile; fileRef = E84BE6F4C5A42505375830C0 /* OFL-InstrumentSans.txt */; };
 		E13848E1C7C02C7CA624509A /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359BE999F7319553F54D04F /* Story.swift */; };
 		F61203209C31544E78C4E4F3 /* AskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24766F6AD1B43F7E8E791EB6 /* AskView.swift */; };
 		F8ADB7E995823D83282699C9 /* KinfolkWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 78ABDDFCA200541FE3F930AB /* KinfolkWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -68,21 +73,23 @@
 		24766F6AD1B43F7E8E791EB6 /* AskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskView.swift; sourceTree = "<group>"; };
 		28E5B9943EADCAE1EB255AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		29E04DE6177F9086CA083A04 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		2B481EFE49920588594753D5 /* LibreCaslonText-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreCaslonText-Italic.ttf"; sourceTree = "<group>"; };
 		3359BE999F7319553F54D04F /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
-		41F24E540DBDAE8689258157 /* Fraunces-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fraunces-Italic.ttf"; sourceTree = "<group>"; };
-		4B34DB183B0546917495FE65 /* OFL-Fraunces.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OFL-Fraunces.txt"; sourceTree = "<group>"; };
+		616C0226E3EA8AA4BAD63E9E /* LibreCaslonText.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LibreCaslonText.ttf; sourceTree = "<group>"; };
 		64B032BE1B8DA848420D70A7 /* Kinfolk.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Kinfolk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65791535B35A12EEEFF5E9A3 /* LibreCaslonDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreCaslonDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		78ABDDFCA200541FE3F930AB /* KinfolkWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = KinfolkWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB0E1FAE4FE59792FCD1F46 /* KinfolkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinfolkApp.swift; sourceTree = "<group>"; };
-		97A853A36FC3A79D1A35644D /* Fraunces.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fraunces.ttf; sourceTree = "<group>"; };
 		A7D4506C14CA064C5323EFA7 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		ADA9057AC1277A8C4C73C347 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		B4AA66B056530F607D879B7A /* ChipRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipRow.swift; sourceTree = "<group>"; };
 		C61142D31F20DEACD1585051 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
 		C7FB5B0F425F795D40211B7D /* FamilyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStore.swift; sourceTree = "<group>"; };
 		C96EC8CB43DB48600CFA7840 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
-		DB1254140E4732DD84A38EA0 /* WaveBackdrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveBackdrop.swift; sourceTree = "<group>"; };
+		CF152ECD1508326F3FB5169E /* InstrumentSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = InstrumentSans.ttf; sourceTree = "<group>"; };
 		DF8B9DEDA1EE93773A8E2DB8 /* KinfolkWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinfolkWidget.swift; sourceTree = "<group>"; };
+		E7F5CB4C99A103CF19C10D2F /* OFL-LibreCaslon.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OFL-LibreCaslon.txt"; sourceTree = "<group>"; };
+		E84BE6F4C5A42505375830C0 /* OFL-InstrumentSans.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OFL-InstrumentSans.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -97,7 +104,6 @@
 				055B17FF18B73469B1A4B239 /* ScreenHeader.swift */,
 				A7D4506C14CA064C5323EFA7 /* StoriesView.swift */,
 				ADA9057AC1277A8C4C73C347 /* TodayView.swift */,
-				DB1254140E4732DD84A38EA0 /* WaveBackdrop.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,9 +111,12 @@
 		5A76E7EEFDC7BE0F66E48BEF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				41F24E540DBDAE8689258157 /* Fraunces-Italic.ttf */,
-				97A853A36FC3A79D1A35644D /* Fraunces.ttf */,
-				4B34DB183B0546917495FE65 /* OFL-Fraunces.txt */,
+				CF152ECD1508326F3FB5169E /* InstrumentSans.ttf */,
+				65791535B35A12EEEFF5E9A3 /* LibreCaslonDisplay-Regular.ttf */,
+				2B481EFE49920588594753D5 /* LibreCaslonText-Italic.ttf */,
+				616C0226E3EA8AA4BAD63E9E /* LibreCaslonText.ttf */,
+				E84BE6F4C5A42505375830C0 /* OFL-InstrumentSans.txt */,
+				E7F5CB4C99A103CF19C10D2F /* OFL-LibreCaslon.txt */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -240,9 +249,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				605215FB2A43EE263314B196 /* Fraunces-Italic.ttf in Resources */,
-				CFB70A07312A33E1875142E5 /* Fraunces.ttf in Resources */,
-				4D109A16A830A94A360DBEF1 /* OFL-Fraunces.txt in Resources */,
+				08313FEF893BB904D540F826 /* InstrumentSans.ttf in Resources */,
+				66352F555C4FC71F4CF4BEAD /* LibreCaslonDisplay-Regular.ttf in Resources */,
+				2007C6B7273E226FC107A3AF /* LibreCaslonText-Italic.ttf in Resources */,
+				D4488FFA32ADCCB5AED120FE /* LibreCaslonText.ttf in Resources */,
+				DDC5F72F43DCFF8F49EC62E7 /* OFL-InstrumentSans.txt in Resources */,
+				28CBA7B594D2BC84054C0C8A /* OFL-LibreCaslon.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,9 +263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B36FD784C579A5F6A1FFDC /* Assets.xcassets in Resources */,
-				9FA2A5D9954F430295E9CF2C /* Fraunces-Italic.ttf in Resources */,
-				84174279B1255991434EDBFA /* Fraunces.ttf in Resources */,
-				29F7377042E411330258CD45 /* OFL-Fraunces.txt in Resources */,
+				174D515254E82420DBDFABF8 /* InstrumentSans.ttf in Resources */,
+				3A93021C8172E8B551AC8037 /* LibreCaslonDisplay-Regular.ttf in Resources */,
+				8FE7214988A77DE42D6FB5DD /* LibreCaslonText-Italic.ttf in Resources */,
+				6CC695937C7039D2710A41C3 /* LibreCaslonText.ttf in Resources */,
+				169FD8687EE0B616CCFE1AB0 /* OFL-InstrumentSans.txt in Resources */,
+				D71DB7FE6D82EFD392034653 /* OFL-LibreCaslon.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +292,6 @@
 				1A1570491564D2A837CD9DB9 /* Story.swift in Sources */,
 				9291C659661CFFA1AC721A6C /* Theme.swift in Sources */,
 				515FF0CD9B72A984A39ED041 /* TodayView.swift in Sources */,
-				4473DB227C2A17B6CE1A90FF /* WaveBackdrop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

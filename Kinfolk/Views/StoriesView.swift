@@ -17,7 +17,6 @@ struct StoriesView: View {
                         ChipRow(options: [ChipOption(value: nil, label: "All")] + ChipOption.grandparents,
                                 selection: $filter)
                     }
-                    .padding(.horizontal, 8)
 
                     if stories.isEmpty {
                         Text(emptyText)
@@ -36,8 +35,9 @@ struct StoriesView: View {
                                 if story.id != monthStories.first?.id { Rule() }
                                 NavigationLink {
                                     ScrollView {
-                                        StoryPage(story: story)
-                                            .padding(16)
+                                        StoryScreen(story: story, date: story.answeredDate)
+                                            .padding(.horizontal, 16)
+                                            .padding(.bottom, 32)
                                     }
                                     .background(Theme.paper.ignoresSafeArea())
                                 } label: {
@@ -52,11 +52,9 @@ struct StoriesView: View {
                     }
                 }
                 .padding(.horizontal, 16)
-                .padding(.top, 20)
                 .padding(.bottom, 24)
                 .animation(.snappy, value: filter)
             }
-            .waveBackdrop()
             .background(Theme.paper.ignoresSafeArea())
             .toolbar(.hidden, for: .navigationBar)
         }

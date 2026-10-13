@@ -14,16 +14,16 @@ struct KinfolkMark: View {
     }
 }
 
-/// The mark next to the name, set in Fraunces.
+/// The mark next to the name, set tight in Instrument Sans.
 struct KinfolkWordmark: View {
     var size: CGFloat = 24
 
     var body: some View {
-        HStack(spacing: size * 0.32) {
+        HStack(spacing: size * 0.3) {
             KinfolkMark(size: size * 1.15)
             Text("Kinfolk")
                 .font(Theme.brand(size))
-                .tracking(-0.2)
+                .tracking(-size * 0.04)
                 .foregroundStyle(Theme.ink)
         }
         .accessibilityElement(children: .ignore)
