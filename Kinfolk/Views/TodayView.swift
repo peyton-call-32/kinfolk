@@ -25,25 +25,53 @@ struct StoryScreen: View {
 
             ScreenHeader(
                 eyebrow: Text(date.formatted(dateStyle)),
-                title: story.title,
-                subtitle: story.questionLine
+                title: story.title
             ) {
-                if case .voice(let seconds) = story.answerType {
-                    Button {} label: {
-                        HStack(spacing: 10) {
-                            Image(systemName: "play.fill")
-                            Text("Hear \(story.grandparent.name) tell it")
-                            Text(Duration.seconds(seconds).formatted(.time(pattern: .minuteSecond)))
-                                .opacity(0.65)
-                                .monospacedDigit()
+                VStack(spacing: 20) {
+                    QuestionQuote(question: story.question)
+
+                    if case .voice(let seconds) = story.answerType {
+                        Button {} label: {
+                            HStack(spacing: 10) {
+                                Image(systemName: "play.fill")
+                                Text("Hear \(story.grandparent.name) tell it")
+                                Text(Duration.seconds(seconds).formatted(.time(pattern: .minuteSecond)))
+                                    .opacity(0.65)
+                                    .monospacedDigit()
+                            }
                         }
+                        .kinfolkButton(.highlight)
                     }
-                    .kinfolkButton(.highlight)
                 }
             }
 
             StoryPage(story: story)
         }
+    }
+}
+
+/// The question the story answers, in quotes, under a small label.
+struct QuestionQuote: View {
+    let question: String
+
+    var body: some View {
+        VStack(spacing: 8) {
+            Text("The question")
+                .font(Theme.ui(.caption, weight: .semibold))
+                .tracking(1.2)
+                .textCase(.uppercase)
+                .foregroundStyle(Theme.inkSoft)
+            Text("\u{201C}\(question)\u{201D}")
+                .font(Theme.question(21, relativeTo: .title3))
+                .foregroundStyle(Theme.ink)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 16)
+        .frame(maxWidth: .infinity)
+        .overlay(alignment: .top) { Rule().frame(width: 40) }
+        .accessibilityElement(children: .combine)
     }
 }
 

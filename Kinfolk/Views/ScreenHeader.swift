@@ -1,11 +1,11 @@
 import SwiftUI
 
 /// The top of every screen, centered: an optional small label, a big serif headline,
-/// one gray line saying what's here, and an optional button or chips underneath.
+/// an optional gray line saying what's here, and an optional button or chips underneath.
 struct ScreenHeader<Accessory: View>: View {
     var eyebrow: Text? = nil
     let title: String
-    let subtitle: String
+    var subtitle: String? = nil
     @ViewBuilder var accessory: Accessory
 
     var body: some View {
@@ -23,12 +23,14 @@ struct ScreenHeader<Accessory: View>: View {
                 .foregroundStyle(Theme.ink)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
-            Text(subtitle)
-                .font(Theme.ui(.body))
-                .tracking(-0.3)
-                .foregroundStyle(Theme.inkSoft)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+            if let subtitle {
+                Text(subtitle)
+                    .font(Theme.ui(.body))
+                    .tracking(-0.3)
+                    .foregroundStyle(Theme.inkSoft)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
             accessory
                 .padding(.top, 10)
         }
@@ -40,7 +42,7 @@ struct ScreenHeader<Accessory: View>: View {
 }
 
 extension ScreenHeader where Accessory == EmptyView {
-    init(eyebrow: Text? = nil, title: String, subtitle: String) {
+    init(eyebrow: Text? = nil, title: String, subtitle: String? = nil) {
         self.init(eyebrow: eyebrow, title: title, subtitle: subtitle) { EmptyView() }
     }
 }
