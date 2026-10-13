@@ -18,9 +18,8 @@ struct FamilyView: View {
                     ($0.name, countText(store.storyCount(for: $0), noun: "story", plural: "stories", none: "No stories yet"))
                 })
                 ForEach(FamilyMember.Group.allCases, id: \.self) { group in
-                    section(group.rawValue, rows: store.members.filter { $0.group == group }.map {
-                        ($0.name, countText(store.questionCount(for: $0), noun: "question", plural: "questions", none: "No questions yet"))
-                    })
+                    // No question counts here: questions are anonymous.
+                    section(group.rawValue, rows: store.members.filter { $0.group == group }.map { ($0.name, "") })
                 }
             }
             .padding(.horizontal, 16)

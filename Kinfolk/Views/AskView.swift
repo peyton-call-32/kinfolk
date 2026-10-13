@@ -12,7 +12,7 @@ struct AskView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 ScreenHeader(title: "Ask a question",
-                             subtitle: "Everyone in the family sees the answer.") {
+                             subtitle: "Everyone in the family sees the answer, but not who asked.") {
                     ChipRow(options: ChipOption.grandparents, selection: $store.askTarget)
                 }
 

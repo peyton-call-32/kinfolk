@@ -29,10 +29,6 @@ final class FamilyStore {
     var askTarget: String? = Family.grandparents.first?.id
     var photos: [String: UIImage] = FamilyStore.loadPhotos()
 
-    func questionCount(for member: FamilyMember) -> Int {
-        stories.filter { $0.asker == member.name }.count
-    }
-
     func storyCount(for grandparent: Grandparent) -> Int {
         stories.filter { $0.grandparentID == grandparent.id }.count
     }

@@ -20,8 +20,11 @@ struct StoryScreen: View {
 
     var body: some View {
         VStack(spacing: 0) {
+            StoryFrom(story: story, isToday: Calendar.current.isDateInToday(date))
+                .padding(.top, 24)
+
             ScreenHeader(
-                eyebrow: Text("\(date.formatted(dateStyle)) · From ") + Text(story.grandparent.name).foregroundColor(Theme.accent),
+                eyebrow: Text(date.formatted(dateStyle)),
                 title: story.title,
                 subtitle: story.questionLine
             ) {
@@ -44,24 +47,17 @@ struct StoryScreen: View {
     }
 }
 
-/// The story on a card: who it's from, the story, a caption, and reactions.
+/// The story on a card: the story, a caption, and reactions.
 struct StoryPage: View {
     let story: Story
-    @Environment(FamilyStore.self) private var store
     @State private var loved = false
-    @State private var photoItem: PhotosPickerItem?
-
-    private var name: String { story.grandparent.name }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            header
-
             Text(story.text)
                 .font(Theme.story())
                 .foregroundStyle(Theme.ink)
                 .lineSpacing(7)
-                .padding(.top, 20)
 
             Text(story.caption)
                 .font(Theme.ui(.footnote))
@@ -87,6 +83,40 @@ struct StoryPage: View {
         .padding(.vertical, 24)
         .frame(maxWidth: .infinity, alignment: .leading)
         .onSheet()
+    }
+}
+
+/// Who the story is from, big and centered at the top: their photo
+/// (or their initial, tap to add a photo) and their name.
+struct StoryFrom: View {
+    let story: Story
+    var isToday = false
+    @Environment(FamilyStore.self) private var store
+    @State private var photoItem: PhotosPickerItem?
+
+    private var name: String { story.grandparent.name }
+    private var photo: UIImage? { store.photos[story.grandparentID] }
+
+    var body: some View {
+        VStack(spacing: 14) {
+            PhotosPicker(selection: $photoItem, matching: .images) {
+                portrait
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(photo == nil ? "Add a photo of \(name)" : "Photo of \(name). Tap to change it.")
+
+            VStack(spacing: 4) {
+                Text(isToday ? "Today's story is from" : "A story from")
+                    .font(Theme.ui(.footnote))
+                    .foregroundStyle(Theme.inkSoft)
+                Text(name)
+                    .font(Theme.display(30, relativeTo: .title))
+                    .tracking(-0.4)
+                    .foregroundStyle(Theme.accent)
+            }
+            .accessibilityElement(children: .combine)
+        }
+        .frame(maxWidth: .infinity)
         .onChange(of: photoItem) {
             Task {
                 if let data = try? await photoItem?.loadTransferable(type: Data.self) {
@@ -96,44 +126,38 @@ struct StoryPage: View {
         }
     }
 
-    /// Who the story is from: their photo (or a button to add one) and name.
-    private var header: some View {
-        HStack(spacing: 14) {
-            if let image = store.photos[story.grandparentID] {
-                PhotosPicker(selection: $photoItem, matching: .images) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 48, height: 48)
-                        .clipped()
-                        .padding(4)
-                        .background(Theme.sheet)
-                        .softShadow()
-                        .rotationEffect(.degrees(-3))
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Photo of \(name). Tap to change it.")
-            }
-
-            VStack(alignment: .leading, spacing: 2) {
-                Text(name)
-                    .font(Theme.ui(.headline, weight: .semibold))
-                    .foregroundStyle(Theme.ink)
-                Text(story.formLabel)
-                    .font(Theme.ui(.footnote))
-                    .foregroundStyle(Theme.inkSoft)
-            }
-
-            Spacer(minLength: 0)
-
-            if store.photos[story.grandparentID] == nil {
-                PhotosPicker(selection: $photoItem, matching: .images) {
-                    Text("Add a photo")
-                }
-                .kinfolkButton(compact: true)
-                .accessibilityLabel("Add a photo of \(name)")
+    /// A small snapshot, slightly tilted. Without a photo, their initial and a camera badge.
+    private var portrait: some View {
+        Group {
+            if let photo {
+                Image(uiImage: photo)
+                    .resizable()
+                    .scaledToFill()
+            } else {
+                Text(name.split(separator: " ").last.map { String($0.prefix(1)) } ?? "")
+                    .font(Theme.display(40, relativeTo: .largeTitle))
+                    .foregroundStyle(Theme.accent)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Theme.paper)
             }
         }
+        .frame(width: 84, height: 84)
+        .clipped()
+        .padding(5)
+        .background(Theme.sheet)
+        .overlay(Rectangle().strokeBorder(Theme.line, lineWidth: 1))
+        .softShadow(1.5)
+        .overlay(alignment: .bottomTrailing) {
+            if photo == nil {
+                Image(systemName: "camera.fill")
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(Theme.onAccent)
+                    .frame(width: 28, height: 28)
+                    .background(Theme.accent, in: Circle())
+                    .offset(x: 8, y: 8)
+            }
+        }
+        .rotationEffect(.degrees(-3))
     }
 }
 
