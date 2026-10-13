@@ -61,4 +61,9 @@ final class FamilyStore {
         photos[grandparentID] = image
         try? image.jpegData(compressionQuality: 0.85)?.write(to: Self.photoURL(grandparentID))
     }
+
+    func removePhoto(for grandparentID: String) {
+        photos[grandparentID] = nil
+        try? FileManager.default.removeItem(at: Self.photoURL(grandparentID))
+    }
 }

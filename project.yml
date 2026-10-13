@@ -19,7 +19,7 @@ targets:
       properties:
         CFBundleDisplayName: Kinfolk
         UIAppFonts: [LibreCaslonDisplay-Regular.ttf, LibreCaslonText.ttf, LibreCaslonText-Italic.ttf, InstrumentSans.ttf]
-        NSPhotoLibraryUsageDescription: Kinfolk uses this to add a photo of Papa.
+        NSPhotoLibraryUsageDescription: Kinfolk uses this to add photos of your grandparents.
         UILaunchScreen:
           UIColorName: LaunchBackground
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]

@@ -1,4 +1,5 @@
 import Foundation
+import Observation
 
 struct Grandparent: Identifiable, Hashable {
     let id: String
@@ -9,14 +10,47 @@ struct Grandparent: Identifiable, Hashable {
 }
 
 enum Family {
-    static let grandparents: [Grandparent] = [
+    /// The starting names. The family can rename anyone on the Family screen.
+    private static let defaults: [Grandparent] = [
         Grandparent(id: "papa", name: "Papa", his: "his"),
         Grandparent(id: "bev", name: "Grandma Bev", his: "her"),
         Grandparent(id: "lou", name: "Grandpa Lou", his: "his"),
     ]
 
+    static var grandparents: [Grandparent] {
+        defaults.map { grandparent in
+            let edit = GrandparentEdits.shared.edits[grandparent.id]
+            return Grandparent(id: grandparent.id,
+                               name: edit?.name ?? grandparent.name,
+                               his: edit?.his ?? grandparent.his)
+        }
+    }
+
     static func grandparent(_ id: String) -> Grandparent {
         grandparents.first { $0.id == id } ?? grandparents[0]
+    }
+
+    static func rename(_ id: String, to name: String, his: String) {
+        GrandparentEdits.shared.edits[id] = .init(name: name, his: his)
+    }
+}
+
+/// Names and pronouns the family has changed, saved on this phone.
+/// Observable, so every screen updates the moment someone is renamed.
+@Observable
+final class GrandparentEdits {
+    struct Edit: Codable { var name: String; var his: String }
+
+    static let shared = GrandparentEdits()
+    private static let key = "grandparentEdits"
+
+    var edits: [String: Edit] {
+        didSet { UserDefaults.standard.set(try? JSONEncoder().encode(edits), forKey: Self.key) }
+    }
+
+    private init() {
+        let data = UserDefaults.standard.data(forKey: Self.key)
+        edits = data.flatMap { try? JSONDecoder().decode([String: Edit].self, from: $0) } ?? [:]
     }
 }
 
