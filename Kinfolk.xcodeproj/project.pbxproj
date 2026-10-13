@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BDFC9F7D4F1EC03C2326698 /* KinfolkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB0E1FAE4FE59792FCD1F46 /* KinfolkApp.swift */; };
+		1750BB83488C17B4B8B2A251 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EC8CB43DB48600CFA7840 /* ButtonStyles.swift */; };
+		1A1570491564D2A837CD9DB9 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359BE999F7319553F54D04F /* Story.swift */; };
+		269656911DA3C28A6F2EAEFA /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D4506C14CA064C5323EFA7 /* StoriesView.swift */; };
+		299E4945EC3BAD79EB1C975C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E04DE6177F9086CA083A04 /* RootView.swift */; };
+		29F7377042E411330258CD45 /* OFL-Fraunces.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B34DB183B0546917495FE65 /* OFL-Fraunces.txt */; };
+		2DD030BF8551DCCB3A73C4E8 /* ScreenHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055B17FF18B73469B1A4B239 /* ScreenHeader.swift */; };
+		4473DB227C2A17B6CE1A90FF /* WaveBackdrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1254140E4732DD84A38EA0 /* WaveBackdrop.swift */; };
+		44B36FD784C579A5F6A1FFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D3AD74184B0AD33E01C0009 /* Assets.xcassets */; };
+		489F60FE3BE068A564A296C4 /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E3194462B13FEAD5555513 /* FamilyView.swift */; };
+		4D109A16A830A94A360DBEF1 /* OFL-Fraunces.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4B34DB183B0546917495FE65 /* OFL-Fraunces.txt */; };
+		515FF0CD9B72A984A39ED041 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA9057AC1277A8C4C73C347 /* TodayView.swift */; };
+		53439AA1B5F2276BC3875A58 /* KinfolkWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8B9DEDA1EE93773A8E2DB8 /* KinfolkWidget.swift */; };
+		605215FB2A43EE263314B196 /* Fraunces-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41F24E540DBDAE8689258157 /* Fraunces-Italic.ttf */; };
+		684A51CAA89CEC3DDD1B8E35 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61142D31F20DEACD1585051 /* Brand.swift */; };
+		8247D99EF56A10E83817A24A /* ChipRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA66B056530F607D879B7A /* ChipRow.swift */; };
+		84174279B1255991434EDBFA /* Fraunces.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97A853A36FC3A79D1A35644D /* Fraunces.ttf */; };
+		9291C659661CFFA1AC721A6C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0F36F98302F21B2B66C08 /* Theme.swift */; };
+		9FA2A5D9954F430295E9CF2C /* Fraunces-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41F24E540DBDAE8689258157 /* Fraunces-Italic.ttf */; };
+		B06727F06347DE040D4B2EA0 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61142D31F20DEACD1585051 /* Brand.swift */; };
+		CFB70A07312A33E1875142E5 /* Fraunces.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97A853A36FC3A79D1A35644D /* Fraunces.ttf */; };
+		D025785540A76DBF18ABCF0F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0F36F98302F21B2B66C08 /* Theme.swift */; };
+		D71A46AC323538DFAAC0F641 /* FamilyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FB5B0F425F795D40211B7D /* FamilyStore.swift */; };
+		E13848E1C7C02C7CA624509A /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359BE999F7319553F54D04F /* Story.swift */; };
+		F61203209C31544E78C4E4F3 /* AskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24766F6AD1B43F7E8E791EB6 /* AskView.swift */; };
+		F8ADB7E995823D83282699C9 /* KinfolkWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 78ABDDFCA200541FE3F930AB /* KinfolkWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		022ED945EDE99CB1F6582439 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CB441E5A3367B80978605E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D69D25D6F54295AD08C1F747;
+			remoteInfo = KinfolkWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F76B854353FA4B2BD2F985C9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F8ADB7E995823D83282699C9 /* KinfolkWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		055B17FF18B73469B1A4B239 /* ScreenHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenHeader.swift; sourceTree = "<group>"; };
+		0DA0F36F98302F21B2B66C08 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1208B0ED283DCAC4C177392E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1D3AD74184B0AD33E01C0009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22E3194462B13FEAD5555513 /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
+		24766F6AD1B43F7E8E791EB6 /* AskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskView.swift; sourceTree = "<group>"; };
+		28E5B9943EADCAE1EB255AB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		29E04DE6177F9086CA083A04 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		3359BE999F7319553F54D04F /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		41F24E540DBDAE8689258157 /* Fraunces-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fraunces-Italic.ttf"; sourceTree = "<group>"; };
+		4B34DB183B0546917495FE65 /* OFL-Fraunces.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "OFL-Fraunces.txt"; sourceTree = "<group>"; };
+		64B032BE1B8DA848420D70A7 /* Kinfolk.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Kinfolk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		78ABDDFCA200541FE3F930AB /* KinfolkWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = KinfolkWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB0E1FAE4FE59792FCD1F46 /* KinfolkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinfolkApp.swift; sourceTree = "<group>"; };
+		97A853A36FC3A79D1A35644D /* Fraunces.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fraunces.ttf; sourceTree = "<group>"; };
+		A7D4506C14CA064C5323EFA7 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
+		ADA9057AC1277A8C4C73C347 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		B4AA66B056530F607D879B7A /* ChipRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipRow.swift; sourceTree = "<group>"; };
+		C61142D31F20DEACD1585051 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		C7FB5B0F425F795D40211B7D /* FamilyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStore.swift; sourceTree = "<group>"; };
+		C96EC8CB43DB48600CFA7840 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		DB1254140E4732DD84A38EA0 /* WaveBackdrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveBackdrop.swift; sourceTree = "<group>"; };
+		DF8B9DEDA1EE93773A8E2DB8 /* KinfolkWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinfolkWidget.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		24F6BA8DBAA4B6594A971071 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				24766F6AD1B43F7E8E791EB6 /* AskView.swift */,
+				C96EC8CB43DB48600CFA7840 /* ButtonStyles.swift */,
+				B4AA66B056530F607D879B7A /* ChipRow.swift */,
+				22E3194462B13FEAD5555513 /* FamilyView.swift */,
+				29E04DE6177F9086CA083A04 /* RootView.swift */,
+				055B17FF18B73469B1A4B239 /* ScreenHeader.swift */,
+				A7D4506C14CA064C5323EFA7 /* StoriesView.swift */,
+				ADA9057AC1277A8C4C73C347 /* TodayView.swift */,
+				DB1254140E4732DD84A38EA0 /* WaveBackdrop.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5A76E7EEFDC7BE0F66E48BEF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				41F24E540DBDAE8689258157 /* Fraunces-Italic.ttf */,
+				97A853A36FC3A79D1A35644D /* Fraunces.ttf */,
+				4B34DB183B0546917495FE65 /* OFL-Fraunces.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		757146DC0DFF17DB510260F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64B032BE1B8DA848420D70A7 /* Kinfolk.app */,
+				78ABDDFCA200541FE3F930AB /* KinfolkWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		851864548D6BB1CFC5EF3A10 /* KinfolkWidget */ = {
+			isa = PBXGroup;
+			children = (
+				1208B0ED283DCAC4C177392E /* Info.plist */,
+				DF8B9DEDA1EE93773A8E2DB8 /* KinfolkWidget.swift */,
+			);
+			path = KinfolkWidget;
+			sourceTree = "<group>";
+		};
+		888B222DCF45274F921A098F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C61142D31F20DEACD1585051 /* Brand.swift */,
+				3359BE999F7319553F54D04F /* Story.swift */,
+				0DA0F36F98302F21B2B66C08 /* Theme.swift */,
+				5A76E7EEFDC7BE0F66E48BEF /* Fonts */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9545E29A993FA1DEF4920E82 = {
+			isa = PBXGroup;
+			children = (
+				EE5F0B25F4DA4177CFF1BFDE /* Kinfolk */,
+				851864548D6BB1CFC5EF3A10 /* KinfolkWidget */,
+				888B222DCF45274F921A098F /* Shared */,
+				757146DC0DFF17DB510260F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE5F0B25F4DA4177CFF1BFDE /* Kinfolk */ = {
+			isa = PBXGroup;
+			children = (
+				1D3AD74184B0AD33E01C0009 /* Assets.xcassets */,
+				C7FB5B0F425F795D40211B7D /* FamilyStore.swift */,
+				28E5B9943EADCAE1EB255AB4 /* Info.plist */,
+				8EB0E1FAE4FE59792FCD1F46 /* KinfolkApp.swift */,
+				24F6BA8DBAA4B6594A971071 /* Views */,
+			);
+			path = Kinfolk;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		420703C68389F82F9AF7C273 /* Kinfolk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16CE7AD766E0E5E0D2890925 /* Build configuration list for PBXNativeTarget "Kinfolk" */;
+			buildPhases = (
+				4819850568F6B15C96669877 /* Sources */,
+				BBC7E787CCD4271FE3C7D415 /* Resources */,
+				F76B854353FA4B2BD2F985C9 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9805BD3FC25BB847E32FD82F /* PBXTargetDependency */,
+			);
+			name = Kinfolk;
+			packageProductDependencies = (
+			);
+			productName = Kinfolk;
+			productReference = 64B032BE1B8DA848420D70A7 /* Kinfolk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D69D25D6F54295AD08C1F747 /* KinfolkWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 798C9724F068B8E52E8D77B6 /* Build configuration list for PBXNativeTarget "KinfolkWidget" */;
+			buildPhases = (
+				490B1D8A6AE8C06F3F7C53FE /* Sources */,
+				7BF36736C167BEE9D1ED6C95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KinfolkWidget;
+			packageProductDependencies = (
+			);
+			productName = KinfolkWidget;
+			productReference = 78ABDDFCA200541FE3F930AB /* KinfolkWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CB441E5A3367B80978605E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 78FB40EA068CF29F75F1DBAB /* Build configuration list for PBXProject "Kinfolk" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 9545E29A993FA1DEF4920E82;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 757146DC0DFF17DB510260F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				420703C68389F82F9AF7C273 /* Kinfolk */,
+				D69D25D6F54295AD08C1F747 /* KinfolkWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BF36736C167BEE9D1ED6C95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				605215FB2A43EE263314B196 /* Fraunces-Italic.ttf in Resources */,
+				CFB70A07312A33E1875142E5 /* Fraunces.ttf in Resources */,
+				4D109A16A830A94A360DBEF1 /* OFL-Fraunces.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC7E787CCD4271FE3C7D415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44B36FD784C579A5F6A1FFDC /* Assets.xcassets in Resources */,
+				9FA2A5D9954F430295E9CF2C /* Fraunces-Italic.ttf in Resources */,
+				84174279B1255991434EDBFA /* Fraunces.ttf in Resources */,
+				29F7377042E411330258CD45 /* OFL-Fraunces.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4819850568F6B15C96669877 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61203209C31544E78C4E4F3 /* AskView.swift in Sources */,
+				684A51CAA89CEC3DDD1B8E35 /* Brand.swift in Sources */,
+				1750BB83488C17B4B8B2A251 /* ButtonStyles.swift in Sources */,
+				8247D99EF56A10E83817A24A /* ChipRow.swift in Sources */,
+				D71A46AC323538DFAAC0F641 /* FamilyStore.swift in Sources */,
+				489F60FE3BE068A564A296C4 /* FamilyView.swift in Sources */,
+				0BDFC9F7D4F1EC03C2326698 /* KinfolkApp.swift in Sources */,
+				299E4945EC3BAD79EB1C975C /* RootView.swift in Sources */,
+				2DD030BF8551DCCB3A73C4E8 /* ScreenHeader.swift in Sources */,
+				269656911DA3C28A6F2EAEFA /* StoriesView.swift in Sources */,
+				1A1570491564D2A837CD9DB9 /* Story.swift in Sources */,
+				9291C659661CFFA1AC721A6C /* Theme.swift in Sources */,
+				515FF0CD9B72A984A39ED041 /* TodayView.swift in Sources */,
+				4473DB227C2A17B6CE1A90FF /* WaveBackdrop.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		490B1D8A6AE8C06F3F7C53FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06727F06347DE040D4B2EA0 /* Brand.swift in Sources */,
+				53439AA1B5F2276BC3875A58 /* KinfolkWidget.swift in Sources */,
+				E13848E1C7C02C7CA624509A /* Story.swift in Sources */,
+				D025785540A76DBF18ABCF0F /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9805BD3FC25BB847E32FD82F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D69D25D6F54295AD08C1F747 /* KinfolkWidget */;
+			targetProxy = 022ED945EDE99CB1F6582439 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		100513A904F7BF274A755D7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KinfolkWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinfolk.Kinfolk.Widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4AA04BC976E7006CAD28636A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5E655E4F5D71EDE0EF09E17B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KinfolkWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinfolk.Kinfolk.Widget;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C392508BD77E1303B1C3DEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C75975B1C5D20E684A4D0287 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Kinfolk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinfolk.Kinfolk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D09F6895BEC2198D0CF479AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Kinfolk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinfolk.Kinfolk;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16CE7AD766E0E5E0D2890925 /* Build configuration list for PBXNativeTarget "Kinfolk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D09F6895BEC2198D0CF479AD /* Debug */,
+				C75975B1C5D20E684A4D0287 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		78FB40EA068CF29F75F1DBAB /* Build configuration list for PBXProject "Kinfolk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C392508BD77E1303B1C3DEE /* Debug */,
+				4AA04BC976E7006CAD28636A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		798C9724F068B8E52E8D77B6 /* Build configuration list for PBXNativeTarget "KinfolkWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E655E4F5D71EDE0EF09E17B /* Debug */,
+				100513A904F7BF274A755D7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CB441E5A3367B80978605E3 /* Project object */;
+}
